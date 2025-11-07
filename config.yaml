@@ -38,12 +38,13 @@ bars:
     widgets:
       left:
         - glazewm_workspaces
+        - separator
+        - media
       center:
         - clock
       right:
         - systray
         - separator
-        - wifi
         - volume
         - battery
         - separator
@@ -68,6 +69,37 @@ widgets:
       hide_if_offline: false
       enable_scroll_switching: false
       animation: false
+
+  media:
+    type: "yasb.media.MediaWidget"
+    options:
+      label: "{title}"
+      hide_empty: true
+      max_field_size:
+        label: 30
+      show_thumbnail: false
+      controls_hide: true
+      media_menu:
+        blur: false
+        round_corners: false
+        border_color: "system"
+        alignment: "left"
+        direction: "down"
+        offset_top: 4
+        thumbnail_corner_radius: 0
+        thumbnail_size: 120
+        max_title_size: 50
+        max_artist_size: 20
+        show_source: false
+      media_menu_icons:
+        play: "󰐊"
+        pause: "󰏤"
+        prev_track: "󰒮"
+        next_track: "󰒭"
+      callbacks:
+        on_left: "toggle_media_menu"
+        on_middle: "do_nothing"
+        on_right: "toggle_play_pause"
 
   clock:
     type: "yasb.clock.ClockWidget"
@@ -102,7 +134,8 @@ widgets:
       label: "<span>{wifi_icon}</span>"
       label_alt: "<span>{wifi_icon}</span>{wifi_name}"
       update_interval: 5000
-      ethernet_label: "<span>{wifi_icon}</span>{ip_addr}"
+      ethernet_label: "<span>{wifi_icon}</span>"
+      ethernet_label_alt: "<span>{wifi_icon}</span>{ip_addr}"
       ethernet_icon: "󰈁"
       get_exact_wifi_strength: true
       wifi_icons: [
@@ -141,6 +174,7 @@ widgets:
     options:
       label: "<span>{icon}</span>"
       label_alt: "<span>{icon}</span>{level}"
+      tooltip: false
       volume_icons:
         - " "  # Icon for muted
         - " "  # Icon for 0-10% volume
