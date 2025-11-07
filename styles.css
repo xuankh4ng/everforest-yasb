@@ -259,8 +259,6 @@
   margin-left: 0;
 }
 
-.battery-widget .widget-container .icon {}
-
 .battery-widget .widget-container .label {
   padding-left: 4px;
 }
@@ -277,14 +275,14 @@
 
 .battery-widget .widget-container .icon.status-high,
 .battery-widget .widget-container .label.status-high {
-  color: var(--aqua);
+  color: var(--blue);
 }
 
 .battery-widget .widget-container .icon.status-full,
 .battery-widget .widget-container .label.status-full,
 .battery-widget .widget-container .icon.status-charging,
 .battery-widget .widget-container .label.status-charging {
-  color: var(--blue);
+  color: var(--green);
 }
 
 /* --- Notifications --- */
