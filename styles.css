@@ -65,11 +65,11 @@
 .glazewm-workspaces .ws-btn {
   border: none;
   padding: 4px 6px;
-  background: var(--bg-2);
+  background: var(--bg-1);
 }
 
 .glazewm-workspaces .ws-btn:hover {
-  background: var(--bg-4);
+  background: var(--bg-3);
 }
 
 .glazewm-workspaces .ws-btn.active_empty,
@@ -84,7 +84,7 @@
 
 /* --- Media --- */
 .media-widget {
-  background-color: var(--bg-2);
+  background-color: var(--bg-1);
 }
 
 .media-widget .label {
@@ -96,6 +96,7 @@
   background-color: var(--bg-0);
   min-width: 440px;
   max-width: 440px;
+  border: 1px solid var(--bg-3);
 }
 
 .media-menu .title,
@@ -178,7 +179,7 @@
 
 /* --- Clock --- */
 .clock-widget .label {
-  /* color: var(--green); */
+  color: var(--green);
 }
 
 /* --- Systray --- */
@@ -212,180 +213,16 @@
   background-color: var(--bg-4);
 }
 
-/* --- Wifi | Menu --- */
-.wifi-widget {
-  background-color: var(--bg-2);
-  margin-right: 0;
-}
-
-.wifi-widget .widget-container .icon {
-  color: var(--green);
-  padding: 0 4px;
-}
-
-.wifi-widget .widget-container .label {
-  color: var(--green);
-  padding-right: 4px;
-}
-
-.wifi-menu {
-  max-height: 350px;
-  min-height: 375px;
-  min-width: 350px;
-  background-color: var(--bg-0);
-}
-
-.wifi-menu .header {
-  background-color: var(--bg-0);
-  color: var(--green);
-  font-size: 18px;
-  padding: 12px 0 8px 8px;
-  font-weight: 800;
-  border-bottom: 2px solid var(--gray-0);
-}
-
-.wifi-menu .progress-bar {
-  max-height: 4;
-}
-
-.wifi-menu .progress-bar::chunk {
-  background-color: var(--green);
-}
-
-.wifi-menu .error-message {
-  font-weight: 800;
-  color: var(--bg-dim);
-  background-color: var(--red);
-}
-
-.wifi-menu .wifi-list {
-  background-color: var(--bg-0);
-  padding: 8px 12px;
-}
-
-.wifi-menu .wifi-item {
-  padding: 8px 12px;
-  margin: 4px 0;
-}
-
-.wifi-menu .wifi-item:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-.wifi-menu .wifi-item .icon {
-  margin-right: 4px;
-  font-size: 24px;
-  color: var(--gray-0);
-}
-
-.wifi-menu .wifi-item .name {
-  font-size: 12px;
-  font-weight: 800;
-  padding-right: 4px;
-  color: var(--gray-0);
-}
-
-.wifi-menu .wifi-item .password {
-  background: transparent;
-  font-size: 12px;
-  border: none;
-  border-bottom: 2px solid var(--gray-2);
-}
-
-.wifi-menu .wifi-item .status,
-.wifi-menu .wifi-item .strength {
-  margin-bottom: 4px;
-  color: var(--gray-0);
-  font-weight: 600;
-}
-
-.wifi-menu .wifi-item .connect {
-  margin-top: 8px;
-  border: none;
-  border-radius: 8px;
-  color: var(--green);
-  background-color: var(--bg-green);
-  padding: 8px 12px;
-}
-
-.wifi-menu .wifi-item .connect:hover {
-  color: var(--bg-dim);
-  background-color: var(--green);
-}
-
-.wifi-menu .wifi-item[active=true] {
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-.wifi-menu .wifi-item[active=true] .icon,
-.wifi-menu .wifi-item[active=true] .name,
-.wifi-menu .wifi-item[active=true] .status,
-.wifi-menu .wifi-item[active=true] .strength {
-  color: var(--green);
-}
-
-.wifi-menu .wifi-item[active=true] .connect {
-  color: var(--red);
-  background-color: var(--bg-red);
-}
-
-.wifi-menu .wifi-item[active=true] .connect:hover {
-  color: var(--bg-dim);
-  background-color: var(--red);
-}
-
-
-.wifi-menu .footer {
-  background-color: var(--bg-0);
-  padding: 8px 0;
-}
-
-.wifi-menu .footer .settings-button {
-  background-color: transparent;
-  border: none;
-  min-width: 26px;
-  min-height: 26px;
-  font-weight: 500;
-  color: var(--gray-1);
-  padding: 0 20px;
-}
-
-.wifi-menu .footer .settings-button:hover {
-  color: var(--green);
-  text-decoration: underline;
-  font-weight: 700;
-}
-
-.wifi-menu .footer .refresh-icon {
-  font-family: "Segoe Fluent Icons";
-  background-color: transparent;
-  border: none;
-  padding: 8px;
-  margin-right: 16px;
-  color: var(--gray-1);
-}
-
-.wifi-menu .footer .refresh-icon:hover {
-  color: var(--green);
-  background-color: var(--bg-green);
-  border-radius: 8px;
-}
-
 /* --- Volume | Audio Menu --- */
 .volume-widget {
-  margin-left: 0;
   margin-right: 0;
-  background-color: var(--bg-2);
-}
-
-.volume-widget .icon {
-  color: var(--red);
-  padding: 0 4px;
+  padding: 0 4px 0 6px;
+  background-color: var(--bg-1);
 }
 
 .volume-widget .label {
   color: var(--red);
-  padding-right: 4px;
+  padding-left: 4px;
 }
 
 .volume-widget .icon.muted,
@@ -395,6 +232,7 @@
 
 .audio-menu {
   background-color: var(--bg-0);
+  border: 1px solid var(--bg-3);
 }
 
 .audio-container .device {
@@ -416,16 +254,15 @@
 
 /* --- Battery --- */
 .battery-widget {
-  background-color: var(--bg-2);
+  background-color: var(--bg-1);
+  padding: 0 6px 0 8px;
   margin-left: 0;
 }
 
-.battery-widget .widget-container .icon {
-  padding: 0 4px;
-}
+.battery-widget .widget-container .icon {}
 
 .battery-widget .widget-container .label {
-  padding-right: 4px;
+  padding-left: 4px;
 }
 
 .battery-widget .widget-container .icon.status-low,
@@ -452,14 +289,21 @@
 
 /* --- Notifications --- */
 .notification-widget {
-  background: var(--bg-2);
+  background-color: var(--bg-1);
 }
 
 .notification-widget .icon {
-  padding: 0 6px 0 4px;
+  padding: 0 4px 0 6px;
+  color: var(--gray-0);
 }
 
-.notification-widget .icon.new-notification {
-  color: var(--bg-dim);
-  background: var(--green);
+.notification-widget .label {
+  padding-right: 6px;
+  color: var(--gray-0);
+}
+
+.notification-widget .icon.new-notification,
+.notification-widget .label.new-notification {
+  color: var(--green);
+  background-color: var(--bg-green);
 }
