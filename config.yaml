@@ -119,9 +119,9 @@ widgets:
       class_name: "systray"
       label_collapsed: "◀"
       label_expanded: "▶"
-      label_position: "left" # Can be "left" or "right"
-      icon_size: 16 # Can be any integer between 8 and 64
-      pin_click_modifier: "alt" # Can be "ctrl", "alt" or "shift"
+      label_position: "left"
+      icon_size: 16
+      pin_click_modifier: "alt"
       show_unpinned: false
       show_unpinned_button: true
       show_battery: false
@@ -149,13 +149,13 @@ widgets:
         alignment: "right"
         direction: "down"
         offset_top: 4
-        show_apps: true
-        show_app_labels: true
-        show_app_icons: true
-        show_apps_expanded: false
-        app_icons:
-          toggle_down: "▼"
-          toggle_up: "▲"
+        # show_apps: true
+        # show_app_labels: true
+        # show_app_icons: true
+        # show_apps_expanded: false
+        # app_icons:
+        #   toggle_down: "▼"
+        #   toggle_up: "▲"
       callbacks:
         on_left: "toggle_volume_menu"
         on_middle: "do_nothing"
