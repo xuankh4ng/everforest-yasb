@@ -133,13 +133,14 @@ widgets:
     options:
       label: "{level}"
       tooltip: false
+      slider_beep: false
       progress_bar:
         enabled: true
         position: "left"
         size: 16
         thickness: 4
         color: "#E67E80"
-        background_color: "#4C3743"
+        background_color: "#4F5B58"
         animation: true
       audio_menu:
         blur: false
@@ -148,6 +149,13 @@ widgets:
         alignment: "right"
         direction: "down"
         offset_top: 4
+        show_apps: true
+        show_app_labels: true
+        show_app_icons: true
+        show_apps_expanded: false
+        app_icons:
+          toggle_down: "▼"
+          toggle_up: "▲"
       callbacks:
         on_left: "toggle_volume_menu"
         on_middle: "do_nothing"

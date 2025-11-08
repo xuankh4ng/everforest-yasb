@@ -65,7 +65,7 @@
 .glazewm-workspaces .ws-btn {
   border: none;
   padding: 4px 6px;
-  background: var(--bg-1);
+  background: var(--bg-2);
 }
 
 .glazewm-workspaces .ws-btn:hover {
@@ -250,6 +250,51 @@
 
 .audio-container .device:hover {
   background-color: var(--bg-2);
+}
+
+.audio-menu .toggle-apps {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  min-height: 24px;
+  min-width: 24px;
+  border-radius: 4px;
+}
+
+.audio-menu .toggle-apps.expanded {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.audio-menu .toggle-apps:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+
+}
+
+/* Container for application volumes (if is enabled) */
+.audio-menu .apps-container {
+  padding: 8px;
+  margin-top: 20px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.062)
+}
+
+.audio-menu .apps-container .app-volume .app-icon-container {
+  min-width: 40px;
+  min-height: 40px;
+  max-width: 40px;
+  max-height: 40px;
+  border-radius: 6px;
+  margin-right: 8px;
+}
+
+.audio-menu .apps-container .app-volume .app-slider {
+  min-height: 40px;
+  max-height: 40px;
+}
+
+.audio-menu .apps-container .app-volume .app-icon-container:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* --- Battery --- */
