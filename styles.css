@@ -82,101 +82,6 @@
   color: var(--red);
 }
 
-/* --- Media --- */
-.media-widget {
-  background-color: var(--bg-1);
-}
-
-.media-widget .label {
-  padding: 0 8px;
-  color: var(--purple);
-}
-
-.media-menu {
-  background-color: var(--bg-0);
-  min-width: 440px;
-  max-width: 440px;
-  border: 1px solid var(--bg-3);
-}
-
-.media-menu .title,
-.media-menu .artist {
-  margin-left: 16px;
-}
-
-.media-menu .title {
-  font-weight: 800;
-  font-size: 14px;
-  color: var(--purple);
-}
-
-.media-menu .artist {
-  font-weight: 600;
-  margin-top: 0;
-  color: var(--gray-0);
-}
-
-.media-menu .btn {
-  margin-top: 12px;
-  padding: 8px;
-  font-size: 20px;
-  min-width: 20px;
-  max-width: 20px;
-  min-height: 20px;
-  max-height: 20px;
-}
-
-.media-menu .btn:hover {
-  background-color: var(--bg-visual);
-}
-
-.media-menu .btn.prev {
-  margin-left: 16px;
-}
-
-.media-menu .btn.play {
-  margin-left: 8px;
-  margin-right: 8px;
-  color: var(--purple);
-  background-color: var(--bg-visual);
-}
-
-.media-menu .btn.play:hover {
-  color: var(--bg-dim);
-  background-color: var(--purple);
-}
-
-.media-menu .playback-time {
-  margin-top: 16px;
-}
-
-.media-menu .progress-slider {
-  height: 10px;
-  margin: 5px 4px;
-  border-radius: 3px;
-}
-
-.media-menu .progress-slider::groove {
-  background: transparent;
-  height: 2px;
-  border-radius: 3px;
-  background: rgba(255, 255, 255, 0.1);
-
-}
-
-.media-menu .progress-slider::groove:hover {
-  background: transparent;
-  height: 6px;
-  border-radius: 3px;
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.media-menu .progress-slider::sub-page {
-  background: var(--purple);
-  border-radius: 3px;
-  height: 4px;
-}
-
 /* --- Clock --- */
 .clock-widget .label {
   color: var(--green);
@@ -189,7 +94,7 @@
 }
 
 .systray .button {
-  padding-left: 4px;
+  padding-right: 4px;
   border: none;
 }
 
@@ -211,6 +116,23 @@
 
 .systray .unpinned-visibility-btn:checked:hover {
   background-color: var(--bg-4);
+}
+/* --- Wifi --- */
+.wifi-widget {
+  background-color: var(--bg-1);
+}
+
+.wifi-widget .widget-container {
+  padding: 0 4px 0 6px;
+}
+
+.wifi-widget .widget-container .icon,
+.wifi-widget .widget-container .label {
+  color: var(--blue);
+}
+
+.wifi-widget .widget-container .label {
+  padding-left: 4px;
 }
 
 /* --- Volume | Audio Menu --- */
@@ -347,6 +269,6 @@
 
 .notification-widget .icon.new-notification,
 .notification-widget .label.new-notification {
-  color: var(--green);
-  background-color: var(--bg-green);
+  color: var(--bg-dim);
+  background-color: var(--green);
 }

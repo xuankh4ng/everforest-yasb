@@ -39,11 +39,11 @@ bars:
       left:
         - glazewm_workspaces
         - separator
-        - media
+        - systray
       center:
         - clock
       right:
-        - systray
+        - wifi
         - separator
         - volume
         - battery
@@ -70,37 +70,6 @@ widgets:
       enable_scroll_switching: false
       animation: false
 
-  media:
-    type: "yasb.media.MediaWidget"
-    options:
-      label: "{title}"
-      hide_empty: true
-      max_field_size:
-        label: 30
-      show_thumbnail: false
-      controls_hide: true
-      media_menu:
-        blur: false
-        round_corners: false
-        border_color: "system"
-        alignment: "left"
-        direction: "down"
-        offset_top: 4
-        thumbnail_corner_radius: 0
-        thumbnail_size: 120
-        max_title_size: 50
-        max_artist_size: 20
-        show_source: false
-      media_menu_icons:
-        play: "󰐊"
-        pause: "󰏤"
-        prev_track: "󰒮"
-        next_track: "󰒭"
-      callbacks:
-        on_left: "toggle_media_menu"
-        on_middle: "do_nothing"
-        on_right: "toggle_play_pause"
-
   clock:
     type: "yasb.clock.ClockWidget"
     options:
@@ -117,9 +86,9 @@ widgets:
     type: "yasb.systray.SystrayWidget"
     options:
       class_name: "systray"
-      label_collapsed: "◀"
-      label_expanded: "▶"
-      label_position: "left"
+      label_collapsed: "▶"
+      label_expanded: "◀"
+      label_position: "right"
       icon_size: 16
       pin_click_modifier: "alt"
       show_unpinned: false
@@ -127,6 +96,27 @@ widgets:
       show_battery: false
       show_volume: false
       show_network: false
+
+  wifi:
+    type: "yasb.wifi.WifiWidget"
+    options:
+      label: "<span>{wifi_icon} </span>{wifi_name}"
+      label_alt: "<span>{wifi_icon} </span>{wifi_name} | {wifi_strength}%"
+      update_interval: 5000
+      callbacks:
+        on_left: "toggle_label"
+        on_right: "exec cmd.exe /c start ms-settings:network"
+      ethernet_label: "<span>{wifi_icon}</span>"
+      ethernet_label_alt: "<span>{wifi_icon}</span>{ip_addr}"
+      ethernet_icon: "\ueba9"
+      get_exact_wifi_strength: true
+      wifi_icons: [
+        "\udb82\udd2e",  # Icon for 0% strength
+        "\udb82\udd1f",  # Icon for 1-24% strength
+        "\udb82\udd22",  # Icon for 25-49% strength
+        "\udb82\udd25",  # Icon for 50-74% strength
+        "\udb82\udd28"   # Icon for 75-100% strength
+      ]
 
   volume:
     type: "yasb.volume.VolumeWidget"
